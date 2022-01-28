@@ -56,14 +56,14 @@ nav {
 }
 
 .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #0A131F;
-    margin: 5px;
+    width: 40px;
+    height: 5px;
+    background-color: #F0576B;
+    margin: 10px;
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1400px) {
     .nav-links {
         width: 70%;
     }
@@ -73,7 +73,7 @@ nav {
     }
 }
 
-@media screen and (max-width:1020px) {
+@media screen and (max-width:1400px) {
     body {
         overflow-x: hidden;
     } 
@@ -83,11 +83,11 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #edf2f4;
+        background-color: #F9B495;
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #0A131F;
+        color: #FAE5B4;
         transform: translateX(100%);
 
     }
