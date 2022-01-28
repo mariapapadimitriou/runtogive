@@ -34,14 +34,16 @@ nav {
 }
 
 .nav-links a {
-    color: #1D3557;
+    display: flex;
+    align-items: center;
+    color: #F0576B;
     text-decoration: none;
     letter-spacing: 3px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .nav-links a:hover {
-    color: #8d99ae;
+    color: #FAE5B4;
 }
 
 .nav-links li {
