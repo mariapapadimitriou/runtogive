@@ -1,0 +1,18 @@
+html,
+body {
+    background-color: #F0576B;
+    margin: 0px;
+    font-family: 'Pink Rocket', sans-serif;
+    font-size: 50px;
+}
+
+.topnav {
+    background-color: #FAE5B4;
+}
+
+.main {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
