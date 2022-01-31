@@ -40,7 +40,7 @@ nav {
 .nav-links a {
     display: flex;
     align-items: center;
-    color: #F0576B;
+    color: #CC2F4D;
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 20px;
@@ -81,7 +81,7 @@ nav {
 .burger div {
     width: 40px;
     height: 5px;
-    background-color: #F0576B;
+    background-color: #CC2F4D;
     transition: all 0.3s ease;
 }
 
@@ -166,7 +166,7 @@ hr {
   position: absolute;
   height: 9px;
   width: 50%;
-  background: #F0576B;
+  background: #CC2F4D;
   opacity: 1;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -256,3 +256,4 @@ form {
   padding: 20px;
   background-color: #f1f1f1;
 }
+

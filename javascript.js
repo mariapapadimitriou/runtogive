@@ -3,7 +3,7 @@
 // White: #FFFFFF
 // Yellow: #FAE5B4
 // Organge: #F9B495
-// Pink: #F0576B
+// Red: #CC2F4D
 // Purple: #8C86AA
 // Blue: #46B1C9
 
@@ -35,3 +35,5 @@ $(document).ready(function(){
 
 
 navSlide();
+
+
