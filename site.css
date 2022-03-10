@@ -108,7 +108,7 @@ nav {
         width: 100%;
         position: absolute;
         right: 0px;
-        height: 92vh;
+        height: calc(100vh - 10vh);
         top: 5vh;
         background-color: white;
         display: flex;
@@ -141,10 +141,6 @@ nav {
         opacity: 1;
         transform: translateX(0px);
     }
-}
-
-form {
-  border: 3px solid #f1f1f1;
 }
 
 .container {
