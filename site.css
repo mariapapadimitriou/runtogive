@@ -87,7 +87,7 @@ nav {
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width:1500px) {
+@media screen and (max-width:1200px) {
     .nav-links {
         width: 70%;
     }
@@ -100,7 +100,7 @@ nav {
     }
 }
 
-@media screen and (max-width:1500px) {
+@media screen and (max-width:1200px) {
     body {
         overflow-x: hidden;
     } 
@@ -120,6 +120,7 @@ nav {
     .nav-links li {
         opacity: 0;
         z-index: 200;
+        font-size: 18px;
     }
     .burger {
         display: block;
