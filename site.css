@@ -9,7 +9,9 @@ body {
 }
 
 main {
-    font-family: 'Open Sans';
+    font-family: 'Montserrat';
+    height: calc(100vh - 100px);
+    width: 100vw;
 }
 
 nav {
@@ -47,14 +49,14 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #F9B495;
+    color: #CC2F4D;
 }
 
 .nav-links a::before {
     content: '';
     display: block;
     height: 5px;
-    background-color: #F9B495;
+    background-color: #CC2F4D;
     position: absolute;
     top: 0;
     width: 0%;
@@ -264,7 +266,8 @@ form {
   height: 50px;
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  font-weight: 900;
+  font-weight: bold;
+  font-family: "Montserrat";
 }
 
 button a {
@@ -275,14 +278,15 @@ button a {
 .module {
   background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("rtg_home.JPG");
   background-size: cover;
-  width: 100vw;
   height: calc(100vh - 100px);
   position: relative;
 }
 
 .mid h2 {
   color: white;
-  font-size: 20px;
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
 }
 
 .mid {
@@ -291,4 +295,7 @@ button a {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  height: calc(100vh - 100px);
 }
