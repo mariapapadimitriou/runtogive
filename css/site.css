@@ -12,6 +12,23 @@ main {
     width: 100vw;
 }
 
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -85,6 +102,7 @@ nav {
     transition: all 0.3s ease;
 }
 
+
 @media screen and (max-width:1200px) {
     .nav-links {
         width: 70%;
@@ -95,6 +113,10 @@ nav {
     }
     body {
       overflow-x: hidden;
+    }
+
+    .team {
+        flex-direction: column;
     }
 }
 
@@ -122,6 +144,10 @@ nav {
     .burger {
         display: block;
         cursor: pointer;
+    }
+
+    .team {
+        flex-direction: column;
     }
 }
 
@@ -225,4 +251,71 @@ button a {
 
 .sponsorsummary {
     margin: 0px 20px 20px 20px;
+}
+
+.aboutus {
+    height: calc(100vh - 100px);
+    background: linear-gradient(to bottom, #CC2F4D 50%, white 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: #CC2F4D;
+    margin: 20%;
+    padding: 10%;
+    border-radius: 10px;
+    border: 4px solid #CC2F4D;
+    height: 100%;
+    text-align: center;
+}
+
+.mission p {
+    color: black;
+}
+
+.history {
+    background-color: #FAE5B4;
+    height: 100%;
+    margin: 20%;
+    padding: 10%;
+    color: black;
+    border-radius: 10px;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.team_box {
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1200px) {
+    
+    .team {
+        flex-direction: column;
+    }
 }
