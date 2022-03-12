@@ -235,7 +235,7 @@ button a {
 }
 
 .event_details {
-  margin: 0px 100px 100px 100px;
+  margin: 0px 10% 10% 10%;
   background-color: #F9B495;
   color: white;
   display: flex; 
@@ -342,7 +342,7 @@ button a {
 
 
     .team_box {
-        margin: 0% 5%;
+        margin: 0% 1%;
     }
 
     .rtg {
