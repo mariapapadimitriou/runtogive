@@ -408,19 +408,14 @@ button a {
 }
 
 #mc_embed_signup_scroll {
+    display: flex;
     flex-direction: column;
     gap: 10%;
 }
 
-#mc_embed_signup div {
-    flex-direction: row;
-    background-color: black;
-}
-
-#mc_embed_signup input {
+.mc_embed_signup input {
     border: 2px solid #E4E4E3;
     height: 50px;
-
 }
 
 @media screen and (max-width:1200px) {
