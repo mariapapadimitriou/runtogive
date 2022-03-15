@@ -264,6 +264,7 @@ button a {
     margin: 0px 20px 20px 20px;
     justify-content: space-evenly;
     align-items: center;
+    gap: 10%;
 }
 
 .aboutus {
@@ -349,24 +350,28 @@ button a {
 }
 
 .subscribe {
+    font-family: "Poppins";
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #FAE5B4;
-    margin: 10% 30%;
+    background-color: #CC2F4D;
+    margin: 0% 10%;
     border-radius: 10px;
     text-align: center;
+    padding: 5%;
+    color: white;
 }
 
 .subscribe-btn {
-    padding: .4rem 1rem;
-    border-radius: 5rem;
-    background: #CC2F4D;
+    font-family: "Poppins";
+    padding: 10px;
+    background: white;
     color: #fff;
-    font-size: 10px;
+    font-size: 20px;
     border: none;
     outline: none;
     cursor: pointer;
+    border-radius: 50px;
   }
 
   input {
@@ -375,12 +380,12 @@ button a {
     outline: none;
     border: 2px solid #d1d1d1;
     font-size: 20px;
+    font-family: "Poppins";
   }
   
   .fa.fa-envelope {
     color: #fff;
-    font-size: 2rem;
-    background: #CC2F4D;
+    font-size: 20px;
     padding: 1rem;
     border-radius: 100%;
     margin: 0 0 1rem 0;
@@ -398,6 +403,7 @@ button a {
         margin: 0px 20px 20px 20px;
         justify-content: space-evenly;
         align-items: center;
+        gap: 10%;
     }
 
     .team {
@@ -423,4 +429,12 @@ button a {
         height: 100%;
     }
 
+}
+
+
+#mc_embed_signup {
+    background:#fff;
+    clear:left;
+    font:14px "Poppins"; 
+    width:600px;
 }
