@@ -350,6 +350,10 @@ button a {
 }
 
 .contactpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: calc(100vh - 100px);
 }
 
@@ -368,12 +372,27 @@ button a {
     width: 50px;
     text-align: center;
     text-decoration: none;
+    margin: 5px 2px;
     border-radius: 50%;
-    color: black;
 }
 
 .fa:hover {
     opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: white;
+}
+
+.fa-envelope {
+  background: black;
+  color: white;
 }
 
 .social_icons {
@@ -383,15 +402,29 @@ button a {
 }
 
 .subscribe-btn {
-    font-family: "Poppins";
-    padding: 10px;
-    background: white;
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    outline: none;
+    text-decoration: none;
+    display: block;
+    border: solid 3px white;
+    background-color: #CC2F4D;
+    white-space: nowrap;
+    outline: 0;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-out;
+    line-height: 1.5;
+    padding: 11px 23px;
+    position: relative;
     cursor: pointer;
-    border-radius: 50px;
+    color: white;
+    margin: 5%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.subscribe-btn:hover {
+    background-color: white;
+    color: #CC2F4D;
 }
 
 #mc_embed_signup {
@@ -399,23 +432,50 @@ button a {
     color: white;
     background-color: #CC2F4D;
     border-radius: 10px;
-    margin: 1% 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 80%;
+    margin: 1% 35%;
+    height: fit-content;
 }
 
-#mc_embed_signup_scroll {
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
+form {
+    padding: 5%;
+    width: 80%;
+    height: 100%;
 }
 
-.mc_embed_signup input {
-    border: 2px solid #E4E4E3;
-    height: 50px;
+.formfield {
+    width: 100%;
+    margin: 5% 0%;
+}
+
+.forminput {
+    border: none;
+    background-color: #CC2F4D;
+    border-bottom: solid 3px rgba(255, 255, 255, 0.3);
+    height: 40px;
+    width: 100%;
+    margin: 0% 5%;
+    font-family: "Poppins";
+    color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.3);
+    opacity: 1; /* Firefox */
+    text-overflow: ellipsis;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.3);
+    text-overflow: ellipsis;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.3);
+    text-overflow: ellipsis;
+  }
+
+.forminput:hover {
+    border-bottom: solid 3px white;
 }
 
 @media screen and (max-width:1200px) {
@@ -454,6 +514,10 @@ button a {
     .rtg {
         flex-direction: column;
         height: 100%;
+    }
+
+    #mc_embed_signup {
+        margin: 1% 10%;
     }
 
 }
