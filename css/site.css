@@ -381,17 +381,19 @@ button a {
 }
 
 .fa-linkedin {
-  background: #007bb5;
+  /*background: #007bb5;*/
+  background: #CC2F4D;
   color: white;
 }
 
 .fa-instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  /*background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);*/
+  background: #CC2F4D;
   color: white;
 }
 
 .fa-envelope {
-  background: black;
+  background: #CC2F4D;
   color: white;
 }
 
