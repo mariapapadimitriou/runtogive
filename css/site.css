@@ -153,6 +153,53 @@ footer {
     text-decoration: none;
     color: white;
 }
+  
+.content {
+    position: relative;
+    width: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+  
+.content .content-overlay {
+    background: rgba(255,255,255);
+    color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+  
+.content:hover .content-overlay{
+    opacity: 1;
+}
+  
+.content-image{
+    width: 100%;
+}
+
+.content-details {
+    color: black;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    opacity: 0;
+}
+
+.content-details h2 {
+    font-size: 20px;
+}
+
+.content-details p {
+    font-size: 12px;
+}
+
+.content:hover .content-details{
+    top: 1%;
+    left: 1%;
+    opacity: 1;
+}
 
 .previous_sponsors {
     margin: 5%;
@@ -160,7 +207,6 @@ footer {
     align-items: center;
     text-align: center;
 }
-
 
 @media screen and (max-width:1200px) {
     .nav-links {
@@ -587,6 +633,10 @@ form {
 
     .small_sponsor {
         flex-direction: column;
+    }
+
+    .sponsor {
+        margin: 1%;
     }
 
 }
