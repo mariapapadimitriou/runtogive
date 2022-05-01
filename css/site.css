@@ -436,15 +436,20 @@ button a {
     color: white;
     background-color: #CC2F4D;
     border-radius: 10px;
-    margin: 1% 35%;
     height: fit-content;
     width: 40%;
+}
+
+#mc_embed_signup_scroll {
+    width: 100%;
+    height: 100%;
 }
 
 form {
     padding: 5%;
     width: 80%;
     height: 100%;
+    text-align: center;
 }
 
 .mc-field-group {
