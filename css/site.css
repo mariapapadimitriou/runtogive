@@ -401,7 +401,7 @@ button a {
 
 .social_icons {
     flex-direction: row;
-    gap: 1%;
+    margin: 5% 0px 0px 0px;
     justify-content: space-between;
 }
 
