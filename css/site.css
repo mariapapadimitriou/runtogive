@@ -120,7 +120,6 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    height: 20vh;
 }
 
 .medium_sponsor div {
@@ -132,7 +131,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 500px);
     gap: 10%;
 }
 
@@ -144,6 +143,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border-radius: 5px;
     border-top: 5px solid #CC2F4D;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -152,6 +152,13 @@ footer {
 .sponsor a {
     text-decoration: none;
     color: white;
+}
+
+.previous_sponsors {
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
