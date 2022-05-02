@@ -538,7 +538,6 @@ button a {
     border-radius: 10px;
     height: fit-content;
     width: 100%;
-    text-align: center;
 }
 
 #mc_embed_signup_scroll {
@@ -548,7 +547,7 @@ button a {
 
 form {
     padding: 5%;
-    width: 80%;
+    width: 100%;
     height: 100%;
     text-align: center;
     padding: 1% 1% 1% 1% !important;
@@ -556,7 +555,7 @@ form {
 
 .mc-field-group {
     width: 100%;
-    margin: 5% 0%;
+    margin: 5%;
 }
 
 #mc_embed_signup .mc-field-group input {
