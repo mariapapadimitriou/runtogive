@@ -550,6 +550,7 @@ form {
     width: 80%;
     height: 100%;
     text-align: center;
+    padding: 10px 0px 10px 0px !important;
 }
 
 .mc-field-group {
@@ -557,7 +558,7 @@ form {
     margin: 5% 0%;
 }
 
-.forminput {
+#mc_embed_signup .mc-field-group input {
     border: none;
     background-color: #CC2F4D;
     border-bottom: solid 3px rgba(255, 255, 255, 0.3);
