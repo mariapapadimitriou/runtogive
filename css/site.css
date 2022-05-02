@@ -538,6 +538,7 @@ button a {
     border-radius: 10px;
     height: fit-content;
     width: 100%;
+    margin: 5%;
 }
 
 #mc_embed_signup_scroll {
@@ -567,6 +568,10 @@ form {
     margin: 0% 5%;
     font-family: "Poppins";
     color: white;
+}
+
+.mce_inline_error {
+    margin: 0% 5%;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
