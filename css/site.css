@@ -585,7 +585,7 @@ form {
     text-overflow: ellipsis;
   }
 
-.forminput:hover {
+#mc_embed_signup .mc-field-group input:hover {
     border-bottom: solid 3px white;
 }
 
