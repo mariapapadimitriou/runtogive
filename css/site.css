@@ -508,7 +508,7 @@ button a {
 .subscribe-btn {
     text-decoration: none;
     display: block;
-    border: solid 3px white;
+    border: solid 3px white !important; 
     background-color: #CC2F4D;
     white-space: nowrap;
     outline: 0;
