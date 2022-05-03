@@ -535,8 +535,7 @@ button a {
     color: white;
     background-color: #CC2F4D;
     border-radius: 10px;
-    height: fit-content;
-    margin: 20% 20% 0% 20%;
+    margin: 0% 20% 0% 20%;
 }
 
 form {
