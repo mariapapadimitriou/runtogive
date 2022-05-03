@@ -507,17 +507,14 @@ button a {
 
 .subscribe-btn {
     text-decoration: none;
-    display: block;
     border: solid 3px white !important; 
     background-color: #CC2F4D;
     white-space: nowrap;
-    outline: 0;
     font-family: inherit;
     font-weight: bold;
     border-radius: 4px;
     transition: background-color 0.2s ease-out;
     line-height: 1.5;
-    position: relative;
     cursor: pointer;
     color: white;
     width: 100%;
