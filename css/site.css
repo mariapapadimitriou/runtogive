@@ -558,13 +558,8 @@ form {
     border-bottom: solid 3px rgba(255, 255, 255, 0.3);
     height: 40px;
     width: 100%;
-    margin: 0% 5%;
     font-family: "Poppins";
     color: white;
-}
-
-.mce_inline_error {
-    margin: 0% 5%;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
