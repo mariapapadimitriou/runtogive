@@ -131,7 +131,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20%;
     margin: 10%;
 }
 
@@ -643,6 +642,7 @@ button a {
 
     .small_sponsor {
         flex-direction: column;
+        gap: 20%;
     }
 
     .sponsor {
