@@ -164,7 +164,6 @@ footer {
 .content .content-overlay {
     background: rgba(255,255,255);
     color: black;
-    position: absolute;
     height: 100%;
     width: 100%;
     opacity: 0;
