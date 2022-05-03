@@ -550,6 +550,13 @@ button a {
     text-align: left;
 }
 
+#mc_embed_signup .foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .mc-field-group {
     width: 100%;
     margin: 5% 0%;
