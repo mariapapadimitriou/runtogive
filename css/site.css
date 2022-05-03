@@ -367,6 +367,7 @@ button a {
 }
 
 .aboutus {
+    height: 50%;
     background: linear-gradient(to bottom, #CC2F4D 50%, white 50%);
     display: flex;
     flex-direction: column;
