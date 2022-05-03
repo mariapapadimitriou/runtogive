@@ -537,8 +537,7 @@ button a {
     background-color: #CC2F4D;
     border-radius: 10px;
     height: fit-content;
-    width: 100%;
-    margin: 20% !important;
+    margin: 20%;
 }
 
 #mc_embed_signup_scroll {
