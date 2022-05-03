@@ -132,7 +132,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 120px);
     gap: 10%;
 }
 
