@@ -8,7 +8,7 @@ In 2020, the team put together an event for “Meals to Heal Toronto” in under
 
 In 2021, RTG teamed up with “Stella’s Place", who provides comprehensive mental health services for 16 to 29 year olds. In only their second year of operating, RTG was able to raise over $25,000. This gave over 300 young adults the opportunity to utilize Stella’s Places’ drop in counseling and truly made a difference within the local community.
 
-I have the privelege of developing RTG's website which will be used for educational and marketing purposes! 
+I have the privelege of developing and hosting RTG's website which will be used for educational and marketing purposes! 
 
 Check out the site in the link below:
 
