@@ -281,7 +281,7 @@ footer {
 .container {
   width: 100vw;
   background: white;
-
+  overflow: hidden;
 }
 
 .joinusbtn {
