@@ -501,7 +501,7 @@ button a {
 
 .social_icons {
     flex-direction: row;
-    margin: 5% 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
     justify-content: space-between;
 }
 
@@ -517,7 +517,6 @@ button a {
     border-radius: 4px;
     transition: background-color 0.2s ease-out;
     line-height: 1.5;
-    padding: 11px 23px;
     position: relative;
     cursor: pointer;
     color: white;
@@ -537,7 +536,7 @@ button a {
     background-color: #CC2F4D;
     border-radius: 10px;
     height: fit-content;
-    margin: 20%;
+    margin: 20% 20% 0% 20%;
 }
 
 form {
