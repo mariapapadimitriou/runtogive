@@ -10,6 +10,6 @@ In 2021, RTG teamed up with “Stella’s Place", who provides comprehensive men
 
 I have the privelege of developing RTG's website which will be used for educational and marketing purposes! 
 
-Check out my progress in the link below:
+Check out the site in the link below:
 
-https://mariapapadimitriou.github.io/runtogive/
+http://runtogive.ca/
