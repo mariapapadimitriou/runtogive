@@ -285,13 +285,6 @@ footer {
   overflow: hidden;
 }
 
-.aboutpage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .joinusbtn {
   background-color: #CC2F4D;
   color: white;
