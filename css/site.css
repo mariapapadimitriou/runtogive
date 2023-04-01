@@ -663,4 +663,8 @@ button a {
         margin: 1%;
     }
 
+    .year_summary {
+        flex-direction: column;
+    }
+
 }
