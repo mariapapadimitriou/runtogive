@@ -600,6 +600,14 @@ button a {
     border-bottom: solid 3px white;
 }
 
+.year_summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+}
+
 @media screen and (max-width:1200px) {
 
     .event_description h1 {
