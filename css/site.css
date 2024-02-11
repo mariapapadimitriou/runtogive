@@ -397,10 +397,10 @@ button a {
 }
 
 .history {
-    background-color: #FAE5B4;
+    background-color: white;
     height: 50%;
     margin: 0% 5% 5% 5%;
-    padding: 2% 5% 2% 5%;
+    padding: 0% 5% 2% 5%;
     color: black;
     border-radius: 10px;
 }
@@ -724,3 +724,27 @@ i {
     size: 50px;
 
 }
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Use separate border model */
+    border-spacing: 10px; /* Add space between columns */
+    font-size: 20px;
+    border: none;
+}
+
+table img {
+    height: 50px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-radius: 10px;
+}
+
+th {
+    background-color: #FAE5B4;
+    text-align: center;
+}
+
