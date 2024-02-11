@@ -35,3 +35,52 @@ $(document).ready(function(){
 
 
 navSlide();
+
+const imageFiles = []; 
+
+for (let i = 1; i <= 28; i++) {imageFiles.push(`image${i}.jpg`);}
+// Array of image file names
+
+// Function to load images and set up slideshow
+function setupSlideshow() {
+    const container = document.getElementById("slideshow-images");
+
+    // Load images and append them to container
+    imageFiles.forEach(image => {
+        const img = new Image();
+        img.src = 'images/photos/' + image;
+        img.classList.add("slideshow-img");
+        container.appendChild(img);
+    });
+
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.slideshow-img');
+    const slideshowContainer = document.getElementById('slideshow-container');
+
+    function slide() {
+        currentIndex = (currentIndex) % images.length;
+        const offset = -currentIndex * slideshowContainer.offsetWidth;
+        container.style.transform = `translateX(${offset}px)`;
+    }
+
+    // Auto-transition every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        slide();
+    }, 10000);
+
+    // Add event listeners for the buttons to navigate the slideshow
+    document.getElementById('prev-button').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        slide();
+    });
+    
+
+    document.getElementById('next-button').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        slide();
+    });
+}
+
+// Call setupSlideshow function when the window loads
+window.onload = setupSlideshow;
