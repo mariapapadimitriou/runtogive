@@ -64,10 +64,11 @@ function setupSlideshow() {
     }
 
     // Auto-transition every 5 seconds
-    setInterval(() => {
+   /*setInterval(() => {
         currentIndex = (currentIndex + 1) % images.length;
         slide();
     }, 10000);
+    */
 
     // Add event listeners for the buttons to navigate the slideshow
     document.getElementById('prev-button').addEventListener('click', () => {
