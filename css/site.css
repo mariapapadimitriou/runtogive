@@ -667,6 +667,15 @@ button a {
         flex-direction: column;
     }
 
+    .table-container {
+        display: flex;
+        flex-direction: column; /* Change to column layout on smaller screens */
+    }
+
+    .table-row {
+        flex-direction: column;
+    }
+
 }
 
 /* FOR IMAGE SLIDER */
@@ -725,26 +734,43 @@ i {
 
 }
 
-table {
-    width: 100%;
-    border-collapse: separate; /* Use separate border model */
-    border-spacing: 10px; /* Add space between columns */
+.table-container {
     font-size: 20px;
-    border: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-table img {
+.table-container img {
     height: 50px;
 }
 
-th, td {
-    padding: 8px;
-    text-align: left;
+.table-content {
+    flex: 1; /* Fill remaining space */
+}
+
+.table-row {
+    display: flex;
+    width: 100%;
+    border: 2px solid #FAE5B4;
     border-radius: 10px;
 }
 
-th {
+.header, .data {
+    flex: 1;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    text-align: left; /* Center-align content */
+}
+
+.header {
+    display: flex;
     background-color: #FAE5B4;
-    text-align: center;
+    text-align: center; /* Center-align content */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
