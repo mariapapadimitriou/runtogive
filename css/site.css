@@ -131,11 +131,11 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    margin: 10%;
+    margin: 50px 5% 50px 5%;
 }
 
 .sponsor {
-    height: 200px;
+    height: 100px;
     width: 300px;
     padding: 1%;
     display: flex;
