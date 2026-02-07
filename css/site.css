@@ -82,6 +82,8 @@ footer {
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 20px;
+    cursor: pointer;
+    position: relative;
 }
 
 .nav-links a:hover {
@@ -96,7 +98,7 @@ footer {
     position: absolute;
     top: 0;
     width: 0%;
-
+    pointer-events: none;
     transition: all ease-in-out 250ms;
 }
   
@@ -358,6 +360,9 @@ body.nav-open .nav-backdrop {
         justify-content: center;
         width: 100%;
         text-align: center;
+        pointer-events: auto;
+        z-index: 1;
+        -webkit-tap-highlight-color: rgba(204, 47, 77, 0.2);
     }
 }
 

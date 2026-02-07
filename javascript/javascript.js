@@ -72,8 +72,10 @@ const navSlide = () => {
     }
 
     navLinks.forEach(function (link) {
-        link.querySelector('a').addEventListener('click', function () {
-            closeMenu();
+        var a = link.querySelector('a');
+        if (!a) return;
+        a.addEventListener('click', function () {
+            setTimeout(closeMenu, 10);
         });
     });
 
