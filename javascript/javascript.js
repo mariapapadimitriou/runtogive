@@ -12,7 +12,16 @@ const navSlide = () => {
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
+    function setNavPaneHeight() {
+        if (!nav) return;
+        var h = window.innerHeight + 'px';
+        nav.style.setProperty('--viewport-height', h);
+        nav.style.height = h;
+        nav.style.minHeight = h;
+    }
+
     function openMenu() {
+        setNavPaneHeight();
         document.body.classList.add('nav-open');
         nav.classList.add('nav-active');
         navLinks.forEach(function (link, index) {
@@ -23,6 +32,11 @@ const navSlide = () => {
             burger.setAttribute('aria-expanded', 'true');
         }
     }
+
+    window.addEventListener('resize', setNavPaneHeight);
+    window.addEventListener('orientationchange', function () {
+        setTimeout(setNavPaneHeight, 100);
+    });
 
     function closeMenu() {
         document.body.classList.remove('nav-open');
