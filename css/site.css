@@ -245,33 +245,68 @@ footer {
 @media screen and (max-width:1200px) {
     body {
         overflow-x: hidden;
-    } 
+    }
+    body.nav-open {
+        overflow: hidden;
+    }
     .nav-links {
         width: 100%;
-        position: absolute;
-        right: 0px;
-        height: calc(100vh - 10vh);
-        top: 5vh;
+        max-width: 320px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        height: 100dvh;
         background-color: white;
-        display: none;
+        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        justify-content: center;
         transform: translateX(100%);
-        z-index: 100;
-
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        z-index: 1001;
+        box-shadow: none;
+        pointer-events: none;
+    }
+    .nav-active .nav-links {
+        transform: translateX(0);
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+        pointer-events: auto;
     }
     .nav-links li {
         opacity: 0;
         z-index: 200;
     }
+    .nav-active .nav-links li {
+        opacity: 1;
+    }
     .burger {
         display: block;
         cursor: pointer;
+        position: relative;
+        z-index: 1002;
     }
 
     .team {
         flex-direction: column;
     }
+}
+
+.nav-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+
+body.nav-open .nav-backdrop {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .nav-active {
@@ -287,15 +322,14 @@ footer {
     }
 }
 
-@keyframes navLinkFade{
+@keyframes navLinkFade {
     from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(20px);
     }
-
     to {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
 }
 
@@ -767,10 +801,25 @@ button a {
 @media screen and (max-width: 768px) {
     #slideshow-container {
         width: 100%;
+        max-width: 100vw;
         height: min(60vh, 320px);
+        min-height: 240px;
         border-radius: 0;
         margin-left: 0;
         margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    #slideshow-images {
+        height: 100%;
+    }
+
+    .slideshow-img {
+        width: 100% !important;
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 
     .slideshow-button {
