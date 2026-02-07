@@ -47,7 +47,7 @@ function setupSlideshow() {
 
     imageFiles.forEach(function (image) {
         const img = new Image();
-        img.src = "images/photos/" + image;
+        img.src = "images/photos/highlights/" + image;
         img.classList.add("slideshow-img");
         img.loading = "lazy";
         img.alt = "Run to Give event photo";

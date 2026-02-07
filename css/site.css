@@ -909,3 +909,226 @@ i {
     justify-content: center;
 }
 
+/* GALLERY PAGES */
+.gallery-intro {
+    font-family: "Poppins";
+    text-align: center;
+    color: #333;
+    padding: 2rem 5%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.gallery-years {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 5% 4rem;
+}
+
+.gallery-year-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 160px;
+    padding: 2rem;
+    background: linear-gradient(135deg, #CC2F4D 0%, #8C86AA 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(204, 47, 77, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-year-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(204, 47, 77, 0.35);
+}
+
+.gallery-year-title {
+    font-family: 'Pink Rocket', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.gallery-year-sub {
+    font-family: "Poppins";
+    font-size: 0.9rem;
+    opacity: 0.95;
+    margin-top: 0.25rem;
+}
+
+.gallery-back {
+    padding: 1rem 5%;
+}
+
+.gallery-back a {
+    font-family: "Poppins";
+    color: #CC2F4D;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.gallery-back a:hover {
+    text-decoration: underline;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem 5% 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-thumb {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f0f0f0;
+    cursor: pointer;
+    aspect-ratio: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-thumb:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* LIGHTBOX (fullscreen photo) */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 70px;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    background: rgba(255, 255, 255, 0.35);
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.lightbox-close-icon {
+    display: block;
+}
+
+.lightbox-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: calc(100vh - 40px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-prev:focus,
+.lightbox-next:hover,
+.lightbox-next:focus {
+    background: rgba(255, 255, 255, 0.35);
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.lightbox-prev .slideshow-arrow,
+.lightbox-next .slideshow-arrow {
+    border-left-color: white;
+    border-right-color: white;
+}
+
+.lightbox-next .slideshow-arrow {
+    margin-left: 4px;
+}
+
+.lightbox-prev .slideshow-arrow {
+    margin-left: -4px;
+    margin-right: 4px;
+}
+
