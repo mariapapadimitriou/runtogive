@@ -833,15 +833,21 @@ button a {
     outline-offset: 2px;
 }
 
-.slideshow-button i {
+.slideshow-arrow {
     display: block;
-    line-height: 1;
-    width: 1em;
-    text-align: center;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 12px solid currentColor;
+    margin-left: 2px;
 }
 
-.slideshow-button--prev i {
-    transform: scaleX(-1);
+.slideshow-button--prev .slideshow-arrow {
+    margin-left: -2px;
+    margin-right: 2px;
+    border-left: none;
+    border-right: 12px solid currentColor;
 }
 
 .slideshow-button:active {
