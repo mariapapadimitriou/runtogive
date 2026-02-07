@@ -36,52 +36,102 @@ $(document).ready(function(){
 
 navSlide();
 
-const imageFiles = []; 
+const imageFiles = [];
+for (let i = 1; i <= 28; i++) { imageFiles.push(`image${i}.jpg`); }
 
-for (let i = 1; i <= 28; i++) {imageFiles.push(`image${i}.jpg`);}
-// Array of image file names
-
-// Function to load images and set up slideshow
 function setupSlideshow() {
-    const container = document.getElementById("slideshow-images");
+    const track = document.getElementById("slideshow-images");
+    const slideshowContainer = document.getElementById("slideshow-container");
 
-    // Load images and append them to container
-    imageFiles.forEach(image => {
+    if (!track || !slideshowContainer) return;
+
+    imageFiles.forEach(function (image) {
         const img = new Image();
-        img.src = 'images/photos/' + image;
+        img.src = "images/photos/" + image;
         img.classList.add("slideshow-img");
-        container.appendChild(img);
+        img.loading = "lazy";
+        img.alt = "Run to Give event photo";
+        track.appendChild(img);
     });
 
+    const images = track.querySelectorAll(".slideshow-img");
+    const totalSlides = images.length;
+    track.style.width = (totalSlides * 100) + "%";
+    images.forEach(function (img) {
+        img.style.flex = "0 0 " + (100 / totalSlides) + "%";
+    });
+    const total = totalSlides;
     let currentIndex = 0;
-    const images = document.querySelectorAll('.slideshow-img');
-    const slideshowContainer = document.getElementById('slideshow-container');
+    let autoPlayTimer = null;
+    const AUTO_PLAY_MS = 5000;
 
-    function slide() {
-        currentIndex = (currentIndex) % images.length;
-        const offset = -currentIndex * slideshowContainer.offsetWidth;
-        container.style.transform = `translateX(${offset}px)`;
+    function getOffset() {
+        return -currentIndex * slideshowContainer.offsetWidth;
     }
 
-    // Auto-transition every 5 seconds
-   /*setInterval(() => {
-        currentIndex = (currentIndex + 1) % images.length;
-        slide();
-    }, 10000);
-    */
+    function goToSlide(index) {
+        currentIndex = (index + total) % total;
+        track.style.transform = "translateX(" + getOffset() + "px)";
+    }
 
-    // Add event listeners for the buttons to navigate the slideshow
-    document.getElementById('prev-button').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        slide();
-    });
-    
+    function next() {
+        goToSlide(currentIndex + 1);
+    }
 
-    document.getElementById('next-button').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        slide();
-    });
+    function prev() {
+        goToSlide(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+        stopAutoPlay();
+        autoPlayTimer = setInterval(next, AUTO_PLAY_MS);
+    }
+
+    function stopAutoPlay() {
+        if (autoPlayTimer) {
+            clearInterval(autoPlayTimer);
+            autoPlayTimer = null;
+        }
+    }
+
+    track.style.transition = "transform 0.5s ease";
+
+    var prevBtn = document.getElementById("prev-button");
+    var nextBtn = document.getElementById("next-button");
+    if (prevBtn) prevBtn.addEventListener("click", function () { prev(); startAutoPlay(); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { next(); startAutoPlay(); });
+
+    slideshowContainer.addEventListener("mouseenter", stopAutoPlay);
+    slideshowContainer.addEventListener("mouseleave", startAutoPlay);
+    slideshowContainer.addEventListener("focusin", stopAutoPlay);
+    slideshowContainer.addEventListener("focusout", startAutoPlay);
+
+    var touchStartX = 0;
+    var touchEndX = 0;
+    slideshowContainer.addEventListener("touchstart", function (e) {
+        touchStartX = e.changedTouches ? e.changedTouches[0].screenX : e.screenX;
+    }, { passive: true });
+    slideshowContainer.addEventListener("touchend", function (e) {
+        touchEndX = e.changedTouches ? e.changedTouches[0].screenX : e.screenX;
+        var diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            if (diff > 0) next();
+            else prev();
+            startAutoPlay();
+        }
+    }, { passive: true });
+
+    function onResize() {
+        track.style.transition = "none";
+        track.style.transform = "translateX(" + getOffset() + "px)";
+        requestAnimationFrame(function () {
+            track.style.transition = "transform 0.5s ease";
+        });
+    }
+    window.addEventListener("resize", onResize);
+
+    goToSlide(0);
+    startAutoPlay();
 }
 
-// Call setupSlideshow function when the window loads
-window.onload = setupSlideshow;
+window.addEventListener("load", setupSlideshow);

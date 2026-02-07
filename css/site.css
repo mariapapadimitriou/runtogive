@@ -1,10 +1,21 @@
-html,
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   background-color: white;
-  margin: 0px;
+  margin: 0;
   font-family: 'Pink Rocket', sans-serif;
   font-size: 50px;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 main {
@@ -42,10 +53,12 @@ nav {
 
 footer {
     font-family: "Poppins";
-    font-size: 10px;
-    color: black;
+    font-size: 12px;
+    color: #666;
     text-align: center;
-    margin: 20px;
+    padding: 1.5rem 20px;
+    margin: 0;
+    border-top: 1px solid #eee;
 }
 
 .logo {
@@ -266,6 +279,14 @@ footer {
     display: flex;
 }
 
+@media screen and (max-width: 1200px) {
+    .nav-links a {
+        padding: 14px 20px;
+        min-height: 48px;
+        justify-content: center;
+    }
+}
+
 @keyframes navLinkFade{
     from {
         opacity: 0;
@@ -287,18 +308,33 @@ footer {
 .joinusbtn {
   background-color: #CC2F4D;
   color: white;
-  width: 100px;
+  width: 140px;
   height: 50px;
   border: none;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: 0 4px 14px rgba(204, 47, 77, 0.35);
   font-weight: bold;
   font-family: "Poppins";
   border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.joinusbtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(204, 47, 77, 0.45);
+}
+
+.joinusbtn:active {
+  transform: translateY(0);
 }
 
 button a {
   text-decoration: none;
   color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
 .module {
@@ -341,6 +377,11 @@ button a {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding: 2rem 1rem 3rem;
+}
+
+.event_description h1 {
+  margin-bottom: 1.5rem;
 }
 
 .event_details {
@@ -611,6 +652,55 @@ button a {
     gap: 5%;
 }
 
+@media screen and (max-width: 768px) {
+    #slideshow-container {
+        width: 100%;
+        height: min(60vh, 320px);
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .slideshow-button {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        font-size: 18px;
+    }
+
+    #prev-button { left: 8px; }
+    #next-button { right: 8px; }
+
+    .module.mid {
+        min-height: min(100vh, 600px);
+        padding: 1.5rem 1rem;
+    }
+
+    .mid h1 {
+        font-size: 1.75rem;
+    }
+
+    .mid h2 {
+        font-size: 1.1rem;
+    }
+
+    .joinusbtn {
+        min-height: 48px;
+        min-width: 120px;
+        padding: 0 1.25rem;
+    }
+
+    .logo img {
+        max-height: 56px;
+        width: auto;
+    }
+
+    .sponsorsummary {
+        margin: 1rem;
+    }
+}
+
 @media screen and (max-width:1200px) {
 
     .event_description h1 {
@@ -681,21 +771,25 @@ button a {
 
 }
 
-/* FOR IMAGE SLIDER */
+/* FOR IMAGE SLIDER / CAROUSEL */
 
 #slideshow-container {
     position: relative;
-    width: 75vw;
-    height: 75vh;
+    width: min(75vw, 900px);
+    max-width: 100%;
+    height: min(75vh, 500px);
     overflow: hidden;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(204, 47, 77, 0.15);
+    touch-action: pan-y pinch-zoom;
 }
 
 #slideshow-images {
     display: flex;
-    transition: transform 2s ease;
     width: 100%;
     height: 100%;
+    will-change: transform;
 }
 
 .slideshow-img {
@@ -703,32 +797,64 @@ button a {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: center;
+    display: block;
+    background-color: #f5f5f5;
 }
 
 .slideshow-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
     border: none;
-    color: black;
-    font-size: 24px;
-    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #CC2F4D;
+    font-size: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.slideshow-button:hover,
+.slideshow-button:focus {
+    background-color: #fff;
+    color: #CC2F4D;
+    transform: translateY(-50%) scale(1.05);
+    outline: 2px solid #CC2F4D;
+    outline-offset: 2px;
+}
+
+.slideshow-button i {
+    display: block;
+    line-height: 1;
+    width: 1em;
+    text-align: center;
+}
+
+.slideshow-button--prev i {
+    transform: scaleX(-1);
+}
+
+.slideshow-button:active {
+    transform: translateY(-50%) scale(0.98);
 }
 
 #prev-button {
-    left: 0;
+    left: 12px;
 }
 
 #next-button {
-    right: 0;
+    right: 12px;
 }
-
-.slideshow-button {
-    background: transparent;
-}
-
 
 i {
 

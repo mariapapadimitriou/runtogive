@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Run to Give</title>
     <link rel="shortcut icon" href="images/shoe_guy.PNG"/>
     <link rel="stylesheet" type="text/css" href="css/site.css"/>
@@ -40,13 +40,14 @@
         <h2>Run to Give Toronto is a charity run that connects you with your community.</h2>
         <button class="joinusbtn"><a href="https://raceroster.com/events/2025/106115/run-to-give-toronto-in-support-of-comkids-foundation" target="_blank">Register Today</a></button>
       </div>
-      <div class="event_description">
+      <section class="event_description" aria-label="Event photos">
         <h1>Join the Experience</h1>
-        <div id="slideshow-container">
+        <div id="slideshow-container" role="region" aria-label="Photo carousel">
           <div id="slideshow-images"></div>
-          <button id="prev-button" class="slideshow-button"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></button>
-          <button id="next-button" class="slideshow-button"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
-      </div>
+          <button type="button" id="prev-button" class="slideshow-button slideshow-button--prev" aria-label="Previous photo"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          <button type="button" id="next-button" class="slideshow-button slideshow-button--next" aria-label="Next photo"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+      </section>
         <br><br>
         <!--
         <div class="event_details">
@@ -58,9 +59,8 @@
           <p><b>Registration Fee:</b> $45 In Person Option - $25 Virtual Option</p>
         </div>
         -->
-        <div class="sponsorsummary">
-          <img src="images/logo.png" width="200px" height="73px"/>
-        </div>
+      <div class="sponsorsummary">
+        <img src="images/logo.png" width="200px" height="73px" alt="Run to Give Toronto"/>
       </div>
     </main>
     <footer>
