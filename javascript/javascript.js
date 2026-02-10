@@ -98,17 +98,18 @@ const navSlide = () => {
 
 navSlide();
 
-const imageFiles = [
+const HIGHLIGHTS_LIST_URL = "images/photos/highlights/list.json";
+const HIGHLIGHTS_FALLBACK = [
     "IMG_3990.JPG", "IMG_3991.JPG", "IMG_3992.JPG", "IMG_3993.JPG",
     "IMG_3994.JPG", "IMG_3995.JPG", "IMG_3996.JPG", "IMG_3997.JPG",
     "IMG_3998.JPG", "IMG_3999.JPG", "IMG_4001.JPG"
 ];
 
-function setupSlideshow() {
+function setupSlideshow(imageFiles) {
     const track = document.getElementById("slideshow-images");
     const slideshowContainer = document.getElementById("slideshow-container");
 
-    if (!track || !slideshowContainer) return;
+    if (!track || !slideshowContainer || !imageFiles || !imageFiles.length) return;
 
     imageFiles.forEach(function (image) {
         const img = new Image();
@@ -209,4 +210,11 @@ function setupSlideshow() {
     startAutoPlay();
 }
 
-window.addEventListener("load", setupSlideshow);
+function initSlideshow() {
+    fetch(HIGHLIGHTS_LIST_URL)
+        .then(function (res) { return res.ok ? res.json() : Promise.reject(); })
+        .then(function (files) { setupSlideshow(files); })
+        .catch(function () { setupSlideshow(HIGHLIGHTS_FALLBACK); });
+}
+
+window.addEventListener("load", initSlideshow);
