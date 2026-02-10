@@ -98,8 +98,11 @@ const navSlide = () => {
 
 navSlide();
 
-const imageFiles = [];
-for (let i = 1; i <= 28; i++) { imageFiles.push(`image${i}.jpg`); }
+const imageFiles = [
+    "IMG_3990.JPG", "IMG_3991.JPG", "IMG_3992.JPG", "IMG_3993.JPG",
+    "IMG_3994.JPG", "IMG_3995.JPG", "IMG_3996.JPG", "IMG_3997.JPG",
+    "IMG_3998.JPG", "IMG_3999.JPG", "IMG_4001.JPG"
+];
 
 function setupSlideshow() {
     const track = document.getElementById("slideshow-images");
