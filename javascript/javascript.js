@@ -109,7 +109,7 @@ function setupSlideshow() {
 
     imageFiles.forEach(function (image) {
         const img = new Image();
-        img.src = "images/photos/2024/" + image;
+        img.src = "images/photos/2023/" + image;
         img.classList.add("slideshow-img");
         img.loading = "lazy";
         img.alt = "Run to Give event photo";
