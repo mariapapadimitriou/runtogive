@@ -217,4 +217,17 @@ function initSlideshow() {
         .catch(function () { setupSlideshow(HIGHLIGHTS_FALLBACK); });
 }
 
+(function () {
+    var loader = document.getElementById('page-loader');
+    if (!loader) return;
+    document.querySelectorAll('a[href]').forEach(function (link) {
+        var href = link.getAttribute('href');
+        var target = link.getAttribute('target');
+        if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http') || target === '_blank') return;
+        link.addEventListener('click', function () {
+            loader.classList.add('active');
+        });
+    });
+}());
+
 window.addEventListener("load", initSlideshow);
